@@ -11,7 +11,7 @@ function getAndPrintHTMLChunks () {
       console.log(data + '/n')
     } )
   }
-  )
+
 
 
 }
