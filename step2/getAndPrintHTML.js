@@ -5,13 +5,18 @@ function getAndPrintHTMLChunks () {
     path: '/http-examples/step1.html'
   };
   var https = require('https') ;
+  var arr = []
   var example = https.get(requestOptions , function (response)  {
     response.setEncoding('utf8');
     response.on('data', function (data) {
-      console.log(data + '/n')
+      arr.push(data) ;
     } )
-  }
-  )
+    response.on('end' , function(data) {
+      console.log(arr)
+    })
+  })
+
+
 
 
 }
